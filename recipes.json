@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "additionalProperties": {
+        "type": "array",
+        "items": {
+            "$ref": "#/definitions/Welcome9Element"
+        }
+    },
+    "definitions": {
+        "Welcome9Element": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "input": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Put"
+                    }
+                },
+                "output": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Put"
+                    }
+                }
+            },
+            "required": [
+                "input",
+                "output"
+            ],
+            "title": "Welcome9Element"
+        },
+        "Put": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "count": {
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "count",
+                "id"
+            ],
+            "title": "Put"
+        }
+    }
+}
